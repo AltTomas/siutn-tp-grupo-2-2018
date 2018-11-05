@@ -19,7 +19,7 @@
 ## Preparación
 
  1. Clonar el repositorio (e ingresar en el):
-    ```$ git clone https://github.com/AltTomas/siutn-tp-grupo-2-2018.git && cd situn-tp-grupo-2-2018```
+    ```$ git clone https://github.com/AltTomas/siutn-tp-grupo-2-2018.git && cd siutn-tp-grupo-2-2018```
 
  2. Iniciar Jenkins:
     ```$ java -jar jenkins_2.45.war```
