@@ -12,7 +12,7 @@
 
 ## Herramientas necesarias
 
-- Java
+- Java JDK
 - Ncat
 - Python 3
 
